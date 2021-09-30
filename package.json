@@ -1,0 +1,19 @@
+{
+  "name": "instaclone_backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoo2wo/instaclone_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoo2wo/instaclone_backend/issues"
+  },
+  "homepage": "https://github.com/yoo2wo/instaclone_backend#readme"
+}

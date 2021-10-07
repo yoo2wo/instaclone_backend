@@ -1,11 +1,12 @@
 import client from "../../client"
 import bcrypt from "bcrypt"
-import jwt from "jsonwebtoken"
+import { ProtectedResolver } from "../users.utils"
 
-export default {
-	Mutation: {
-		editProfile: async(_,{firstName,lastName,username,email,password:newPassword}, {loggedInUser})=> {
-			console.log(loggedInUser)
+const resolverFn = async(_,
+	{firstName,lastName,username,email,password:newPassword, bio, avatar},
+	{loggedInUser}
+	)=> {
+			console.log(avatar)
 			let uglyPassword = null;
 			if(newPassword){
 				uglyPassword = await bcrypt.hash(newPassword, 10);
@@ -19,6 +20,7 @@ export default {
 					lastName,
 					username,
 					email,
+					bio,
 					...(uglyPassword && {password : uglyPassword})
 				},
 			});
@@ -33,5 +35,9 @@ export default {
 				}
 			}
 		}
+
+export default {
+	Mutation: {
+		editProfile: ProtectedResolver(resolverFn),
 	}
 }

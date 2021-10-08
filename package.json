@@ -24,17 +24,20 @@
     "@graphql-tools/schema": "^8.2.0",
     "@prisma/client": "^3.1.1",
     "apollo-server": "^2.19.1",
+    "apollo-server-express": "2.19",
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "graphql": "^15.6.0",
     "graphql-tools": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
+    "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-env": "^7.15.8",
     "prisma": "^3.1.1"
   }
 }
